@@ -20,12 +20,35 @@ class BaseSpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super(BaseSpider, self).__init__(*args, **kwargs)
         self.website = None  # Override in child classes
+        self.debug_mode = kwargs.get('debug', True)  # Enable debugging by default
     
     def parse(self, response):
         """
         Base parse method to be implemented by child classes.
         """
+        if self.debug_mode:
+            self.debug_response(response)
         raise NotImplementedError("Child spiders must implement the parse method")
+    
+    def debug_response(self, response):
+        """
+        Debug the response to identify issues with selectors.
+        """
+        self.logger.info(f"Status code: {response.status} for URL: {response.url}")
+        
+        if response.status != 200:
+            self.logger.error(f"Failed to fetch page: {response.url}, Status: {response.status}")
+            
+            # Log headers for debugging
+            self.logger.debug(f"Response Headers: {response.headers}")
+            
+            # Save the response body for inspection
+            filename = f"debug_{self.name}_{response.status}.html"
+            with open(filename, 'wb') as f:
+                f.write(response.body)
+            self.logger.info(f"Saved response body to {filename}")
+        else:
+            self.logger.info(f"Successfully fetched page: {response.url}")
     
     def extract_price(self, price_str):
         """
@@ -39,6 +62,8 @@ class BaseSpider(scrapy.Spider):
         """
         if not price_str:
             return None
+        
+        self.logger.debug(f"Extracting price from: {price_str}")
             
         # Remove non-numeric characters
         price_clean = re.sub(r'[^\d.,]', '', price_str)
@@ -51,8 +76,11 @@ class BaseSpider(scrapy.Spider):
                 # Keep last dot as decimal separator
                 price_clean = ''.join(parts[:-1]) + '.' + parts[-1]
                 
-            return float(price_clean)
+            price_value = float(price_clean)
+            self.logger.debug(f"Extracted price: {price_value}")
+            return price_value
         except ValueError:
+            self.logger.warning(f"Could not extract price from: {price_str}")
             return None
     
     def extract_currency(self, price_str):
@@ -100,6 +128,8 @@ class BaseSpider(scrapy.Spider):
         Returns:
             ElectronicsItem: The created item
         """
+        self.logger.debug(f"Creating item with name: {name}, price: {price}, url: {url}")
+        
         if not currency and isinstance(price, str):
             currency = self.extract_currency(price)
         
@@ -108,7 +138,7 @@ class BaseSpider(scrapy.Spider):
         
         specs = extract_specs(specs_text) if specs_text else {}
         
-        return ElectronicsItem(
+        item = ElectronicsItem(
             name=name,
             price=price,
             currency=currency or "ZAR",
@@ -118,3 +148,44 @@ class BaseSpider(scrapy.Spider):
             category=category,
             image_url=image_url
         )
+        
+        self.logger.info(f"Created item: {name} - Price: {price} {currency}")
+        return item
+    
+    def test_selectors(self, response):
+        """
+        Test different selectors to help debug extraction issues.
+        """
+        self.logger.info("TESTING SELECTORS ON PAGE: " + response.url)
+        
+        # Test various selectors for product titles
+        title_selectors = [
+            'h1::text',
+            'h1.product-title::text', 
+            'h1.product-name::text',
+            'h1.product-single__title::text',
+            '.product-title::text',
+            '.product-name::text',
+            'div.title h1::text'
+        ]
+        
+        # Test various selectors for prices
+        price_selectors = [
+            '.price::text',
+            'span.price::text',
+            '.product__price::text',
+            'div.price span::text',
+            'span.product-price::text',
+            'div[data-qa="product-price"] span::text'
+        ]
+        
+        # Log results for each selector
+        self.logger.info("=== TITLE SELECTORS ===")
+        for selector in title_selectors:
+            result = response.css(selector).getall()
+            self.logger.info(f"Selector '{selector}': {result}")
+        
+        self.logger.info("=== PRICE SELECTORS ===")
+        for selector in price_selectors:
+            result = response.css(selector).getall()
+            self.logger.info(f"Selector '{selector}': {result}")

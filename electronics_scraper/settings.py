@@ -1,51 +1,29 @@
-"""
-Scrapy settings for electronics_scraper project.
-"""
+# Modified settings.py - add these new settings
+DOWNLOAD_DELAY = 5  # Increase from 2 to 5 seconds
+RANDOMIZE_DOWNLOAD_DELAY = True
 
-BOT_NAME = 'electronics_scraper'
+# Rotate user agents
+USER_AGENT_LIST = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0'
+]
 
-SPIDER_MODULES = ['electronics_scraper.spiders']
-NEWSPIDER_MODULE = 'electronics_scraper.spiders'
-
-# Crawl responsibly by identifying yourself to websites
-USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-
-# Obey robots.txt rules
-ROBOTSTXT_OBEY = True
-
-# Configure maximum concurrent requests performed by Scrapy
-CONCURRENT_REQUESTS = 8
-CONCURRENT_REQUESTS_PER_DOMAIN = 2
-
-# Configure a delay for requests to avoid overloading servers (in seconds)
-DOWNLOAD_DELAY = 2
-
-# Disable cookies for enhanced privacy
-COOKIES_ENABLED = False
-
-# Configure item pipelines
-ITEM_PIPELINES = {
-    'electronics_scraper.pipelines.DataProcessingPipeline': 300,
+# Add a middleware to rotate user agents
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    'electronics_scraper.middlewares.RandomUserAgentMiddleware': 400,
+    'electronics_scraper.middlewares.ProxyMiddleware': 350,
 }
 
-# Enable and configure the AutoThrottle extension
-AUTOTHROTTLE_ENABLED = True
-# The initial delay (in seconds)
-AUTOTHROTTLE_START_DELAY = 5
-# The maximum delay (in seconds)
-AUTOTHROTTLE_MAX_DELAY = 60
-# Average number of requests Scrapy should be sending in parallel
-AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
-# Enable showing throttling stats for every response received
-AUTOTHROTTLE_DEBUG = False
+# For sites like BackMarket that require JavaScript
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
 
-# Set settings whose default value is deprecated to a future-proof value
-REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
-TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
-FEED_EXPORT_ENCODING = 'utf-8'
-
-# Output encoding
-FEED_EXPORT_ENCODING = 'utf-8'
-
-# Log level
-LOG_LEVEL = 'INFO'
+PLAYWRIGHT_LAUNCH_OPTIONS = {
+    "headless": True,
+    "timeout": 30 * 1000,  # 30 seconds
+}

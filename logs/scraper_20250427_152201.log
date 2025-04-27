@@ -1,0 +1,505 @@
+2025-04-27 15:22:01,235 [INFO] Starting electronics price comparison crawler...
+2025-04-27 15:22:01,241 [INFO] Scrapy 2.12.0 started (bot: electronics_scraper)
+2025-04-27 15:22:01,243 [INFO] Versions: lxml 5.4.0.0, libxml2 2.13.8, cssselect 1.3.0, parsel 1.10.0, w3lib 2.3.1, Twisted 24.11.0, Python 3.13.2 (main, Feb  5 2025, 08:05:21) [GCC 14.2.1 20250128], pyOpenSSL 25.0.0 (OpenSSL 3.4.1 11 Feb 2025), cryptography 44.0.2, Platform Linux-6.14.2-arch1-1-x86_64-with-glibc2.41
+2025-04-27 15:22:01,243 [INFO] Adding spider: bobshop
+2025-04-27 15:22:01,246 [INFO] Enabled addons:
+[]
+2025-04-27 15:22:01,246 [WARNING] /home/lucky/business/electronics-web-scraper/scrapy-env/lib/python3.13/site-packages/scrapy/utils/request.py:120: ScrapyDeprecationWarning: 'REQUEST_FINGERPRINTER_IMPLEMENTATION' is a deprecated setting.
+It will be removed in a future version of Scrapy.
+  return cls(crawler)
+
+2025-04-27 15:22:01,247 [DEBUG] Using selector: EpollSelector
+2025-04-27 15:22:01,247 [DEBUG] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-04-27 15:22:01,247 [DEBUG] Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-04-27 15:22:01,248 [DEBUG] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-04-27 15:22:01,248 [DEBUG] Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-04-27 15:22:01,251 [INFO] Telnet Password: f93268193658c7fa
+2025-04-27 15:22:01,274 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-04-27 15:22:01,275 [INFO] Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'electronics_scraper',
+ 'CONCURRENT_REQUESTS': 8,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'electronics_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['electronics_scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+2025-04-27 15:22:01,436 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-04-27 15:22:01,438 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-04-27 15:22:03,908 [INFO] Enabled item pipelines:
+['electronics_scraper.pipelines.DataProcessingPipeline']
+2025-04-27 15:22:03,909 [INFO] Spider opened
+2025-04-27 15:22:03,916 [INFO] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-04-27 15:22:03,918 [INFO] Telnet console listening on 127.0.0.1:6023
+2025-04-27 15:22:03,919 [INFO] Adding spider: revibe
+2025-04-27 15:22:03,925 [INFO] Enabled addons:
+[]
+2025-04-27 15:22:03,925 [WARNING] /home/lucky/business/electronics-web-scraper/scrapy-env/lib/python3.13/site-packages/scrapy/utils/request.py:120: ScrapyDeprecationWarning: 'REQUEST_FINGERPRINTER_IMPLEMENTATION' is a deprecated setting.
+It will be removed in a future version of Scrapy.
+  return cls(crawler)
+
+2025-04-27 15:22:03,925 [DEBUG] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-04-27 15:22:03,925 [DEBUG] Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-04-27 15:22:03,926 [INFO] Telnet Password: e45dad138ce905aa
+2025-04-27 15:22:03,926 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-04-27 15:22:03,927 [INFO] Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'electronics_scraper',
+ 'CONCURRENT_REQUESTS': 8,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'electronics_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['electronics_scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+2025-04-27 15:22:03,928 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-04-27 15:22:03,928 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-04-27 15:22:03,929 [INFO] Enabled item pipelines:
+['electronics_scraper.pipelines.DataProcessingPipeline']
+2025-04-27 15:22:03,929 [INFO] Spider opened
+2025-04-27 15:22:03,929 [INFO] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-04-27 15:22:03,931 [INFO] Telnet console listening on 127.0.0.1:6024
+2025-04-27 15:22:03,931 [INFO] Adding spider: istore
+2025-04-27 15:22:03,934 [INFO] Enabled addons:
+[]
+2025-04-27 15:22:03,935 [DEBUG] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-04-27 15:22:03,936 [DEBUG] Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-04-27 15:22:03,936 [INFO] Telnet Password: dd74e87e8317deda
+2025-04-27 15:22:03,937 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-04-27 15:22:03,938 [INFO] Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'electronics_scraper',
+ 'CONCURRENT_REQUESTS': 8,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'electronics_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['electronics_scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+2025-04-27 15:22:03,941 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-04-27 15:22:03,942 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-04-27 15:22:03,942 [INFO] Enabled item pipelines:
+['electronics_scraper.pipelines.DataProcessingPipeline']
+2025-04-27 15:22:03,942 [INFO] Spider opened
+2025-04-27 15:22:03,943 [INFO] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-04-27 15:22:03,944 [INFO] Telnet console listening on 127.0.0.1:6025
+2025-04-27 15:22:03,945 [INFO] Adding spider: gorilla
+2025-04-27 15:22:03,951 [INFO] Enabled addons:
+[]
+2025-04-27 15:22:03,952 [DEBUG] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-04-27 15:22:03,952 [DEBUG] Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-04-27 15:22:03,952 [INFO] Telnet Password: 8d06528ad16032b0
+2025-04-27 15:22:03,953 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-04-27 15:22:03,954 [INFO] Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'electronics_scraper',
+ 'CONCURRENT_REQUESTS': 8,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'electronics_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['electronics_scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+2025-04-27 15:22:03,957 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-04-27 15:22:03,958 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-04-27 15:22:03,958 [INFO] Enabled item pipelines:
+['electronics_scraper.pipelines.DataProcessingPipeline']
+2025-04-27 15:22:03,959 [INFO] Spider opened
+2025-04-27 15:22:03,959 [INFO] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-04-27 15:22:03,961 [INFO] Telnet console listening on 127.0.0.1:6026
+2025-04-27 15:22:03,961 [INFO] Adding spider: backmarket
+2025-04-27 15:22:03,966 [INFO] Enabled addons:
+[]
+2025-04-27 15:22:03,966 [DEBUG] Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-04-27 15:22:03,966 [DEBUG] Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-04-27 15:22:03,967 [INFO] Telnet Password: a3264edcfa4146c1
+2025-04-27 15:22:03,968 [INFO] Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-04-27 15:22:03,969 [INFO] Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'electronics_scraper',
+ 'CONCURRENT_REQUESTS': 8,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 2,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'electronics_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['electronics_scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+2025-04-27 15:22:03,971 [INFO] Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-04-27 15:22:03,971 [INFO] Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-04-27 15:22:03,972 [INFO] Enabled item pipelines:
+['electronics_scraper.pipelines.DataProcessingPipeline']
+2025-04-27 15:22:03,972 [INFO] Spider opened
+2025-04-27 15:22:03,973 [INFO] Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-04-27 15:22:03,976 [INFO] Telnet console listening on 127.0.0.1:6027
+2025-04-27 15:22:03,977 [INFO] Starting crawl process
+2025-04-27 15:22:03,995 [DEBUG] Filtered offsite request to 'istorepreowned.co.za': <GET https://istorepreowned.co.za/robots.txt>
+2025-04-27 15:22:04,896 [DEBUG] Crawled (200) <GET https://www.bobshop.co.za/robots.txt> (referer: None)
+2025-04-27 15:22:05,098 [DEBUG] Crawled (200) <GET https://www.gorillaphones.co.za/robots.txt> (referer: None)
+2025-04-27 15:22:06,135 [DEBUG] Crawled (200) <GET https://revibe.co.za/robots.txt> (referer: None)
+2025-04-27 15:22:06,172 [DEBUG] Crawled (200) <GET https://istorepreowned.co.za/collections/iphone-savings> (referer: None)
+2025-04-27 15:22:06,177 [DEBUG] Crawled (200) <GET https://www.backmarket.com/robots.txt> (referer: None)
+2025-04-27 15:22:09,153 [DEBUG] Crawled (200) <GET https://www.bobshop.co.za/cell-phones-accessories/cell-phones-smartphones/c/21949> (referer: None)
+2025-04-27 15:22:10,284 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/iphone/e8724fea-197e-4815-85ce-21b8068020cc> (referer: None)
+2025-04-27 15:22:10,385 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/iphone/e8724fea-197e-4815-85ce-21b8068020cc>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:10,436 [DEBUG] Crawled (200) <GET https://www.gorillaphones.co.za/collections/iphones> (referer: None)
+2025-04-27 15:22:14,379 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/samsung/12ed7728-38c7-45de-972c-b5c128e9889c> (referer: None)
+2025-04-27 15:22:14,481 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/samsung/12ed7728-38c7-45de-972c-b5c128e9889c>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:15,276 [DEBUG] Crawled (200) <GET https://istorepreowned.co.za/collections/iphone> (referer: None)
+2025-04-27 15:22:17,627 [DEBUG] Crawled (200) <GET https://www.gorillaphones.co.za/collections/samsung-galaxy> (referer: None)
+2025-04-27 15:22:18,190 [DEBUG] Crawled (200) <GET https://www.bobshop.co.za/computers-networking/ipads-tablets-ereaders/c/11448> (referer: None)
+2025-04-27 15:22:22,175 [DEBUG] Crawled (200) <GET https://revibe.co.za/collections/refurbished-iphones> (referer: None)
+2025-04-27 15:22:22,395 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/google-pixel/5b368baa-338c-4f22-aa3e-6e95f39101dd> (referer: None)
+2025-04-27 15:22:22,496 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/google-pixel/5b368baa-338c-4f22-aa3e-6e95f39101dd>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:22,729 [DEBUG] Crawled (404) <GET https://istorepreowned.co.za/collections/machttps://istorepreowned.co.za/collections/apple-watch> (referer: None)
+2025-04-27 15:22:22,831 [INFO] Ignoring response <404 https://istorepreowned.co.za/collections/machttps://istorepreowned.co.za/collections/apple-watch>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:23,789 [DEBUG] Crawled (200) <GET https://www.bobshop.co.za/cell-phones-accessories/smart-watches/c/18112https://www.bobshop.co.za/cell-phones-accessories/smart-watch-accessories/c/18113> (referer: None)
+2025-04-27 15:22:24,901 [DEBUG] Crawled (200) <GET https://istorepreowned.co.za/collections/accessories-2> (referer: None)
+2025-04-27 15:22:24,960 [DEBUG] Crawled (200) <GET https://www.bobshop.co.za/computers-networking/laptops-notebooks/c/18836> (referer: None)
+2025-04-27 15:22:25,398 [DEBUG] Crawled (200) <GET https://istorepreowned.co.za/collections/ipad> (referer: None)
+2025-04-27 15:22:25,409 [DEBUG] Crawled (200) <GET https://www.gorillaphones.co.za/collections/apple-watch> (referer: None)
+2025-04-27 15:22:25,458 [DEBUG] Crawled (200) <GET https://www.bobshop.co.za/gaming/consoles/c/10123> (referer: None)
+2025-04-27 15:22:25,498 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/android-smartphones/52395319-44d0-4b36-951e-fe9234a54847> (referer: None)
+2025-04-27 15:22:25,571 [INFO] Closing spider (finished)
+2025-04-27 15:22:25,572 [INFO] Spider istore finished. Processing collected data...
+2025-04-27 15:22:25,572 [WARNING] No data collected by istore
+2025-04-27 15:22:25,575 [INFO] Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 1657,
+ 'downloader/request_count': 5,
+ 'downloader/request_method_count/GET': 5,
+ 'downloader/response_bytes': 271606,
+ 'downloader/response_count': 5,
+ 'downloader/response_status_count/200': 4,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 21.630363,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 4, 27, 13, 22, 25, 573717, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 2021950,
+ 'httpcompression/response_count': 5,
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/404': 1,
+ 'items_per_minute': None,
+ 'log_count/INFO': 38,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 221970432,
+ 'memusage/startup': 221970432,
+ 'offsite/domains': 1,
+ 'offsite/filtered': 1,
+ 'response_received_count': 5,
+ 'responses_per_minute': None,
+ 'robotstxt/request_count': 1,
+ 'scheduler/dequeued': 5,
+ 'scheduler/dequeued/memory': 5,
+ 'scheduler/enqueued': 5,
+ 'scheduler/enqueued/memory': 5,
+ 'start_time': datetime.datetime(2025, 4, 27, 13, 22, 3, 943354, tzinfo=datetime.timezone.utc)}
+2025-04-27 15:22:25,575 [INFO] Spider closed (finished)
+2025-04-27 15:22:25,624 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/android-smartphones/52395319-44d0-4b36-951e-fe9234a54847>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:25,656 [INFO] Closing spider (finished)
+2025-04-27 15:22:25,656 [INFO] Spider gorilla finished. Processing collected data...
+2025-04-27 15:22:25,656 [WARNING] No data collected by gorilla
+2025-04-27 15:22:25,657 [INFO] Dumping Scrapy stats:
+{'downloader/request_bytes': 1294,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 164822,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'elapsed_time_seconds': 21.697373,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 4, 27, 13, 22, 25, 656878, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 928206,
+ 'httpcompression/response_count': 4,
+ 'items_per_minute': None,
+ 'log_count/INFO': 32,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 222101504,
+ 'memusage/startup': 222101504,
+ 'response_received_count': 4,
+ 'responses_per_minute': None,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2025, 4, 27, 13, 22, 3, 959505, tzinfo=datetime.timezone.utc)}
+2025-04-27 15:22:25,657 [INFO] Spider closed (finished)
+2025-04-27 15:22:25,658 [INFO] Closing spider (finished)
+2025-04-27 15:22:25,658 [INFO] Spider bobshop finished. Processing collected data...
+2025-04-27 15:22:25,658 [WARNING] No data collected by bobshop
+2025-04-27 15:22:25,659 [INFO] Dumping Scrapy stats:
+{'downloader/request_bytes': 2099,
+ 'downloader/request_count': 6,
+ 'downloader/request_method_count/GET': 6,
+ 'downloader/response_bytes': 180960,
+ 'downloader/response_count': 6,
+ 'downloader/response_status_count/200': 6,
+ 'elapsed_time_seconds': 21.742831,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 4, 27, 13, 22, 25, 659196, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 1339451,
+ 'httpcompression/response_count': 6,
+ 'items_per_minute': None,
+ 'log_count/INFO': 69,
+ 'log_count/WARNING': 5,
+ 'memusage/max': 221708288,
+ 'memusage/startup': 221708288,
+ 'response_received_count': 6,
+ 'responses_per_minute': None,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 5,
+ 'scheduler/dequeued/memory': 5,
+ 'scheduler/enqueued': 5,
+ 'scheduler/enqueued/memory': 5,
+ 'start_time': datetime.datetime(2025, 4, 27, 13, 22, 3, 916365, tzinfo=datetime.timezone.utc)}
+2025-04-27 15:22:25,660 [INFO] Spider closed (finished)
+2025-04-27 15:22:25,859 [DEBUG] Crawled (200) <GET https://revibe.co.za/collections/refurbished-samsung> (referer: None)
+2025-04-27 15:22:26,159 [DEBUG] Crawled (200) <GET https://revibe.co.za/collections/refurbished-used-macbooks> (referer: None)
+2025-04-27 15:22:27,632 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/ipad-mini/5e829871-a097-4814-b6a1-b0e9167b7cb1> (referer: None)
+2025-04-27 15:22:27,734 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/ipad-mini/5e829871-a097-4814-b6a1-b0e9167b7cb1>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:32,718 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/apple-ipad/f78ae8f5-4611-4ad0-b2ad-ced07765b847> (referer: None)
+2025-04-27 15:22:32,820 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/apple-ipad/f78ae8f5-4611-4ad0-b2ad-ced07765b847>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:36,622 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/apple-ipad-air/ff63f59b-a54d-445b-8d34-d5457e66f5d1> (referer: None)
+2025-04-27 15:22:36,724 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/apple-ipad-air/ff63f59b-a54d-445b-8d34-d5457e66f5d1>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:37,901 [DEBUG] Crawled (200) <GET https://revibe.co.za/collections/refurbished-used-laptop> (referer: None)
+2025-04-27 15:22:43,049 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/ipad-pro/a1733845-a071-4904-b2c6-eb0f332f7ef3> (referer: None)
+2025-04-27 15:22:43,151 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/ipad-pro/a1733845-a071-4904-b2c6-eb0f332f7ef3>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:44,160 [DEBUG] Crawled (200) <GET https://revibe.co.za/collections/ipads> (referer: None)
+2025-04-27 15:22:47,984 [DEBUG] Crawled (200) <GET https://revibe.co.za/collections/gaming> (referer: None)
+2025-04-27 15:22:48,614 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/samsung-galaxy-tab/9da6c79a-baa0-4807-bb7d-18afd94dd3ed> (referer: None)
+2025-04-27 15:22:48,716 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/samsung-galaxy-tab/9da6c79a-baa0-4807-bb7d-18afd94dd3ed>: HTTP status code is not handled or not allowed
+2025-04-27 15:22:51,007 [DEBUG] Crawled (200) <GET https://revibe.co.za/collections/accessories-and-audio> (referer: None)
+2025-04-27 15:22:51,188 [INFO] Closing spider (finished)
+2025-04-27 15:22:51,189 [INFO] Spider revibe finished. Processing collected data...
+2025-04-27 15:22:51,189 [WARNING] No data collected by revibe
+2025-04-27 15:22:51,191 [INFO] Dumping Scrapy stats:
+{'downloader/request_bytes': 2556,
+ 'downloader/request_count': 8,
+ 'downloader/request_method_count/GET': 8,
+ 'downloader/response_bytes': 1077622,
+ 'downloader/response_count': 8,
+ 'downloader/response_status_count/200': 8,
+ 'elapsed_time_seconds': 47.260753,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 4, 27, 13, 22, 51, 190531, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 8476615,
+ 'httpcompression/response_count': 8,
+ 'items_per_minute': None,
+ 'log_count/INFO': 67,
+ 'log_count/WARNING': 5,
+ 'memusage/max': 221839360,
+ 'memusage/startup': 221839360,
+ 'response_received_count': 8,
+ 'responses_per_minute': None,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 7,
+ 'scheduler/dequeued/memory': 7,
+ 'scheduler/enqueued': 7,
+ 'scheduler/enqueued/memory': 7,
+ 'start_time': datetime.datetime(2025, 4, 27, 13, 22, 3, 929778, tzinfo=datetime.timezone.utc)}
+2025-04-27 15:22:51,192 [INFO] Spider closed (finished)
+2025-04-27 15:22:55,165 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/microsoft-surface/4e604590-e4e2-48e7-9a0a-953760f94cf0> (referer: None)
+2025-04-27 15:22:55,267 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/microsoft-surface/4e604590-e4e2-48e7-9a0a-953760f94cf0>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:02,286 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/android-tablets/5950ae53-49d1-47f2-9722-323ea7fd53f3> (referer: None)
+2025-04-27 15:23:02,388 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/android-tablets/5950ae53-49d1-47f2-9722-323ea7fd53f3>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:03,974 [INFO] Crawled 12 pages (at 12 pages/min), scraped 0 items (at 0 items/min)
+2025-04-27 15:23:08,126 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/apple-macbook/a059fa0c-b88d-4095-b6a2-dcbeb9dd5b33> (referer: None)
+2025-04-27 15:23:08,227 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/apple-macbook/a059fa0c-b88d-4095-b6a2-dcbeb9dd5b33>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:12,179 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/windows-laptops/95d6f541-323f-4e25-bc85-5f567700354b> (referer: None)
+2025-04-27 15:23:12,281 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/windows-laptops/95d6f541-323f-4e25-bc85-5f567700354b>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:19,019 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/chromebook-laptop/1c5f4bcd-4d1c-4f29-8a47-de7c52e89565> (referer: None)
+2025-04-27 15:23:19,121 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/chromebook-laptop/1c5f4bcd-4d1c-4f29-8a47-de7c52e89565>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:24,333 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/2-in-1-hybrid-pcs/ea86b5b6-0422-4b65-8418-9762f31ccdff> (referer: None)
+2025-04-27 15:23:24,435 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/2-in-1-hybrid-pcs/ea86b5b6-0422-4b65-8418-9762f31ccdff>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:29,462 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/gaming-laptops/15d04ae7-46e5-4ba9-af98-49c2e8f9e47b> (referer: None)
+2025-04-27 15:23:29,564 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/gaming-laptops/15d04ae7-46e5-4ba9-af98-49c2e8f9e47b>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:32,131 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/computers-laptops/41f464b5-9356-48d3-86c3-a2bf52ced60e> (referer: None)
+2025-04-27 15:23:32,233 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/computers-laptops/41f464b5-9356-48d3-86c3-a2bf52ced60e>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:37,326 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/watches/4ee50ebd-1eb4-4436-a797-80828ce28cc5> (referer: None)
+2025-04-27 15:23:37,427 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/watches/4ee50ebd-1eb4-4436-a797-80828ce28cc5>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:43,174 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/sony-playstation/dcbd8534-a5cd-4df0-9d54-dc80814fbcf6> (referer: None)
+2025-04-27 15:23:43,275 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/sony-playstation/dcbd8534-a5cd-4df0-9d54-dc80814fbcf6>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:49,071 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/microsoft-xbox/95a6d5f7-222b-45c9-a99b-e27cb10395af?p=0#model=999%2520Xbox%2520Original> (referer: None)
+2025-04-27 15:23:49,173 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/microsoft-xbox/95a6d5f7-222b-45c9-a99b-e27cb10395af?p=0>: HTTP status code is not handled or not allowed
+2025-04-27 15:23:55,233 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/nintendo-switch/a14cbb76-cdfc-4658-a0b9-d1275ba984e8> (referer: None)
+2025-04-27 15:23:55,335 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/nintendo-switch/a14cbb76-cdfc-4658-a0b9-d1275ba984e8>: HTTP status code is not handled or not allowed
+2025-04-27 15:24:01,194 [DEBUG] Crawled (403) <GET https://www.backmarket.com/en-us/l/retro-gaming/22619a61-9184-4ce7-837b-81caa17c853f> (referer: None)
+2025-04-27 15:24:01,296 [INFO] Ignoring response <403 https://www.backmarket.com/en-us/l/retro-gaming/22619a61-9184-4ce7-837b-81caa17c853f>: HTTP status code is not handled or not allowed
+2025-04-27 15:24:01,301 [INFO] Closing spider (finished)
+2025-04-27 15:24:01,301 [INFO] Spider backmarket finished. Processing collected data...
+2025-04-27 15:24:01,302 [WARNING] No data collected by backmarket
+2025-04-27 15:24:01,305 [INFO] Dumping Scrapy stats:
+{'downloader/request_bytes': 8173,
+ 'downloader/request_count': 23,
+ 'downloader/request_method_count/GET': 23,
+ 'downloader/response_bytes': 18848,
+ 'downloader/response_count': 23,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/403': 22,
+ 'elapsed_time_seconds': 117.32993,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 4, 27, 13, 24, 1, 303050, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 4276,
+ 'httpcompression/response_count': 23,
+ 'httperror/response_ignored_count': 22,
+ 'httperror/response_ignored_status_count/403': 22,
+ 'items_per_minute': None,
+ 'log_count/INFO': 52,
+ 'log_count/WARNING': 5,
+ 'memusage/max': 283439104,
+ 'memusage/startup': 222232576,
+ 'response_received_count': 23,
+ 'responses_per_minute': None,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 22,
+ 'scheduler/dequeued/memory': 22,
+ 'scheduler/enqueued': 22,
+ 'scheduler/enqueued/memory': 22,
+ 'start_time': datetime.datetime(2025, 4, 27, 13, 22, 3, 973120, tzinfo=datetime.timezone.utc)}
+2025-04-27 15:24:01,305 [INFO] Spider closed (finished)
+2025-04-27 15:24:01,342 [INFO] Crawling completed. Check the 'results' directory for opportunities.
