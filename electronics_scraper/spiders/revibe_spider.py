@@ -12,10 +12,13 @@ class RevibeSpider(BaseSpider):
     name = "revibe"
     allowed_domains = ["revibe.co.za"]
     start_urls = [
-        "https://revibe.co.za/collections/pre-owned-iphones",
-        "https://revibe.co.za/collections/pre-owned-samsung",
-        "https://revibe.co.za/collections/pre-owned-macbooks",
-        "https://revibe.co.za/collections/pre-owned-ipads"
+        "https://revibe.co.za/collections/refurbished-iphones",
+        "https://revibe.co.za/collections/refurbished-samsung",
+        "https://revibe.co.za/collections/refurbished-used-macbooks",
+        "https://revibe.co.za/collections/refurbished-used-laptop",
+        "https://revibe.co.za/collections/ipads",
+        "https://revibe.co.za/collections/gaming",
+        "https://revibe.co.za/collections/accessories-and-audio"
     ]
     
     def __init__(self, *args, **kwargs):

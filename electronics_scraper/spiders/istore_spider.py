@@ -12,10 +12,12 @@ class IStorePreOwnedSpider(BaseSpider):
     name = "istore"
     allowed_domains = ["istore.co.za"]
     start_urls = [
-        "https://www.istore.co.za/pre-owned-iphone",
-        "https://www.istore.co.za/pre-owned-mac",
-        "https://www.istore.co.za/pre-owned-ipad",
-        "https://www.istore.co.za/pre-owned-apple-watch"
+        "https://istorepreowned.co.za/collections/iphone-savings",
+        "https://istorepreowned.co.za/collections/iphone",
+        "https://istorepreowned.co.za/collections/ipad",
+        "https://istorepreowned.co.za/collections/mac"
+        "https://istorepreowned.co.za/collections/apple-watch",
+        "https://istorepreowned.co.za/collections/accessories-2",
     ]
     
     def __init__(self, *args, **kwargs):

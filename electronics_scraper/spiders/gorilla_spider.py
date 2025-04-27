@@ -12,9 +12,9 @@ class GorillaPhoneSpider(BaseSpider):
     name = "gorilla"
     allowed_domains = ["gorillaphones.co.za"]
     start_urls = [
-        "https://gorillaphones.co.za/collections/certified-pre-owned-phones",
-        "https://gorillaphones.co.za/collections/certified-pre-owned-ipads",
-        "https://gorillaphones.co.za/collections/certified-pre-owned-macbooks"
+        "https://www.gorillaphones.co.za/collections/iphones",
+        "https://www.gorillaphones.co.za/collections/samsung-galaxy",
+        "https://www.gorillaphones.co.za/collections/apple-watch"
     ]
     
     def __init__(self, *args, **kwargs):

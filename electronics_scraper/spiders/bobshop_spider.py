@@ -12,10 +12,12 @@ class BobShopSpider(BaseSpider):
     name = "bobshop"
     allowed_domains = ["bobshop.co.za"]
     start_urls = [
-        "https://bobshop.co.za/collections/smartphones",
-        "https://bobshop.co.za/collections/tablets",
-        "https://bobshop.co.za/collections/laptops",
-        "https://bobshop.co.za/collections/smartwatches"
+        "https://www.bobshop.co.za/cell-phones-accessories/cell-phones-smartphones/c/21949",
+        "https://www.bobshop.co.za/computers-networking/ipads-tablets-ereaders/c/11448",
+        "https://www.bobshop.co.za/computers-networking/laptops-notebooks/c/18836",
+        "https://www.bobshop.co.za/cell-phones-accessories/smart-watches/c/18112"
+        "https://www.bobshop.co.za/cell-phones-accessories/smart-watch-accessories/c/18113",
+        "https://www.bobshop.co.za/gaming/consoles/c/10123",
     ]
     
     def __init__(self, *args, **kwargs):
